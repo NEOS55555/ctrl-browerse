@@ -1,0 +1,56 @@
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+.top-nav {
+  height: $navHeight;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  background-color: #fff;
+  .move-bar {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .tip-title {
+    float: left;
+    -webkit-user-select: none;
+    padding: 0 8px;
+    .icon {
+      width: 16px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  .opera-btn-list {
+    user-select: none;
+    margin: 0;
+    bottom: 0;
+    float: right;
+    display: flex;
+    li {
+      width: 45px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      &.active,
+      &:hover {
+        background-color: $fnHoverColor;
+      }
+      &.close {
+        font-size: 14px;
+        &:hover {
+          background-color: #e81123;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

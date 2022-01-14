@@ -1,0 +1,56 @@
+@import '../assets/css/reset.css';
+@import '../assets/css/common.scss';
+@import '../assets/css/media.scss';
+
+#root {
+  background-color: #fff;
+  box-shadow: 1px 1px 11px #665e5e;
+  border-radius: $outerRadius;
+}
+body {
+  user-select: none;
+  ::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+  ::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 8px;
+    background-color: #b3b3b3;
+    /* background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    ); */
+  }
+  ::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #ededed;
+    border-radius: 8px;
+  }
+}
+body.transparent {
+  opacity: 0;
+  background-color: transparent;
+}
+
+.setting-ul {
+  // max-height: 400px;
+  overflow: auto;
+  li {
+    .ant-input:hover {
+      border-color: #d9d9d9;
+    }
+    .ant-input:focus,
+    .ant-input-focused {
+      border-color: #40a9ff;
+    }
+  }
+}

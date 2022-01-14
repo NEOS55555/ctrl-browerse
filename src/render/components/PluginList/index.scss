@@ -1,0 +1,53 @@
+.plugin-list-wrapper {
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: wheat;
+    }
+    $icoHeight: 36px;
+    .icon {
+      width: $icoHeight;
+      height: $icoHeight;
+      line-height: $icoHeight;
+      text-align: center;
+      color: #fff;
+      background-color: #fdb746;
+      border-radius: 2px;
+      margin-right: 20px;
+    }
+    $downctnWidth: 130px;
+    .txt-ctn {
+      width: calc(100% - #{$downctnWidth} - 20px);
+      .title {
+        font-size: 14px;
+      }
+      .desc {
+        font-size: 12px;
+        color: rgb(148, 143, 143);
+      }
+    }
+    .right-ctn {
+      width: calc(100% - #{$icoHeight} - 20px);
+      display: flex;
+      justify-content: space-between;
+    }
+    .download-btn {
+      text-align: center;
+
+      .ico {
+        font-size: 20px;
+      }
+      // font-size: 24px;
+    }
+    .right-download-ctn {
+      width: $downctnWidth;
+      text-align: center;
+      &:hover {
+        color: rgb(68, 146, 219);
+      }
+    }
+  }
+}

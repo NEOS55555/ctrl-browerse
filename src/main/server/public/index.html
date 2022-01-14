@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="./connect.js"></script>
+	<style>
+		.ctrl {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="abc">
+		<p>设置网站自动开启的页面，每次打开都会自动开启</p>
+		<input type="text" id="urliput" value="">
+
+		<p>请输入测试页面的链接地址</p>
+		<input type="text" id="tstiput" value="https://www.baidu.com">
+		<p>请输入ws的链接地址,替换本机ip即可</p>
+		<input type="text" id="wsipt" value="ws://10.25.0.170:33253">
+		<br>
+		<button id="surbtn">确定</button>
+		<div>点击确定之后，在测试页面中点击输入框，该页面会自动弹出输入框</div>
+	</div>
+	<div id="ctrl" class="ctrl">
+		<button id="prvpage">上一页</button>
+	</div>
+
+</body>
+<script>
+	const qwsc = QWS_CONNECT()
+
+	// new-broserse-page
+	surbtn.onclick = function() {
+		console.log('ffff',)
+		abc.style.display = 'none'
+		ctrl.style.display = 'block'
+		let isInput = false
+		qwsc.connect(wsipt.value)
+		qwsc.setDefaultShowUrl(urliput.value)
+		qwsc.newPage(tstiput.value)
+		// 上一页
+		prvpage.onclick = function() {
+			qwsc.prevPage()
+		}
+
+		qwsc.onCtrlInputChange(function() {
+			if (!isInput) {
+				console.log('停止控制鼠标的ws')
+			}
+			isInput = true
+		})
+		qwsc.onCtrlInputChangeOver(function() {
+			isInput = false
+			console.log('开始控制鼠标的ws')
+		})
+	}
+
+</script>
+
+</html>

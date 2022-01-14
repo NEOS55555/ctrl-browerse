@@ -1,0 +1,34 @@
+.link {
+  color: $normalBlue;
+}
+
+.flex {
+  display: flex;
+}
+
+.oneline-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ver-middle {
+  &::after {
+    content: '';
+    width: 0;
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+  }
+}
+
+body.full-screen {
+  .top-nav {
+    display: none;
+  }
+  .ant-tabs-nav {
+    display: none;
+  }
+  .ant-tabs {
+    height: 100%;
+  }
+}

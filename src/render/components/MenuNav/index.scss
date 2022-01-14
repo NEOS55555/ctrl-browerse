@@ -1,0 +1,18 @@
+.menu-nav-warpper {
+  height: 100%;
+  // box-shadow: $boxShadow;
+  border-right: 1px solid $borderColor;
+  .menu-list {
+    .menu-li {
+      cursor: pointer;
+      padding: 10px;
+      padding-left: 20px;
+      &:hover {
+        color: $normalBlue;
+      }
+      &.active {
+        background-color: $hoverColor;
+      }
+    }
+  }
+}

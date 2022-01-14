@@ -1,0 +1,10 @@
+.ant-tabs {
+  height: calc(100% - #{$navHeight});
+  .ant-tabs-nav {
+    margin: 0;
+  }
+  .ant-tabs-content,
+  .ant-tabs-content-holder {
+    height: 100%;
+  }
+}
